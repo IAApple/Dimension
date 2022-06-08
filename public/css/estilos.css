@@ -1,0 +1,42 @@
+
+body{
+    background: #343744;
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+}
+#container{
+    /*Tamano de un contenedor*/ 
+
+   /* Margen de un contenedor*/
+
+    /*width: 1100px;*/
+    /*borde de algun color y tamano*/
+
+}
+
+header{
+    /*height:100px;
+    width:100%;
+    margin:0px;
+    text-align:center;
+    line-height:100px ;
+    */
+}
+
+.slide {
+    margin-top:10px;
+}
+
+.slide img {
+    height:65vh;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    }
+
+.alignleft {
+        float: left;
+    }

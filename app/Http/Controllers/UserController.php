@@ -13,9 +13,25 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-        $users = User::all();
-        return view('usuarios.index', ['users' => $users]);
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index(Request $request){
+        
+        $query = trim($request->get('search'));
+
+        if($request){
+            $users = User::where('name', 'LIKE','%'. $query . '%')
+            ->orderBy('id','asc')
+            ->paginate(5);
+
+            return view('usuarios.index', ['users' => $users, 'search' => $query]);
+        }
+        //$users = User::all();
+        //return view('usuarios.index', ['users' => $users]);
+
     }
     /**
      * Show the form for creating a new resource.
