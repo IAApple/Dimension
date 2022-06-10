@@ -1,3 +1,7 @@
+@extends ('layouts.app')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,13 +45,13 @@
 <body>
     <div id="container">
         <header>
-            <div class="bg-image d-flex justify-content-center align-items-center" style=" background-image: url('dist/img/backg.jpg'); height: 100vh;">
+            <div class="bg-image d-flex justify-content-center align-items-center" style=" background-image: url('dist/img/fondoF.jpg'); height: 100vh;">
                 <div style="position:relative; right:-650px; top:-270px;">
                     <a href="{{ url("/login") }}">
                     <button type="button" class="btn btn-primary btn-lg btn btn-dark">Iniciar sesión</button>
                     </a>
-                    <a href="{{ url("/registro") }}">
-                    <button type="button" class="btn btn-primary btn-lg btn btn-dark">Crea tu galería</button>
+                    <a href="{{ url("/register") }}">
+                    <button type="button" class="btn btn-primary btn-lg btn btn-dark">Registrate</button>
                     </a>
                 </div>
                 <div style="position:relative; right:50px;">
@@ -257,3 +261,4 @@
 </body>
 
 </html>
+@endsection
