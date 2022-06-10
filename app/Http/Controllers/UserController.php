@@ -85,9 +85,7 @@ class UserController extends Controller
         } else {
             unset($usuario->password);
         }
-        //modificamos esta parte para que actualice roles de usuarios
-        //si tiene rol actualizamos el rol
-        // si no tiene rol le asignamos un rol
+        
         $role = $usuario->roles;
         if (count($role) > 0) {
             $role_id = $role[0]->id;

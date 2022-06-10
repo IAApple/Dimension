@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::resource('/usuarios', 'UserController');
@@ -11,14 +12,13 @@ Route::resource('/usuarios', 'UserController');
 
 Route::resource('/roles', 'RoleController');
 
+
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::get('/welcome2', function () {
-    return view('welcome2');
-});
-Route::get('/perfil', function () {
-    return view('perfil');
+
+Route::get('/profile', function () {
+    return view('profile');
 });
 
 Route::get('/chat', function () {
@@ -38,3 +38,4 @@ Route::get('/subir', function () {
 Route::get('/DB', function () {
     return view('DBTest');
 });
+
