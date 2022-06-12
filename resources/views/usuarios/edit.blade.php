@@ -44,7 +44,18 @@
                         placeholder="Confirme Contraseña">
                 </div>
             </div>
-
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Ocupacion</label>
+                    <input type="text" class="form-control" name="ocupacion" value="{{ $user->ocupacion }}"
+                        placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Estado</label>
+                    <input type="text" class="form-control" name="estado" value="{{ $user->estado }}"
+                        placeholder="Ingresa tu correo electronico">
+                </div>
+            </div>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label>Rol</label>

@@ -1,6 +1,7 @@
 @extends ('layouts.app')
 
 @section('content')
+
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
@@ -42,7 +43,16 @@
                         placeholder="Confirme Contraseña">
                 </div>
             </div>
-
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Ocupacion</label>
+                    <input type="text" class="form-control" name="ocupacion" placeholder="Ingresa una ocupacion (Opcional)">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Estado</label>
+                    <input type="text" class="form-control" name="estado" placeholder="Ingresa un estado (Opcional)">
+                </div>
+            </div>
             <div class="row">
                 <div class="form-group col-md-6">
                     <label>Rol</label>

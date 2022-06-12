@@ -44,7 +44,38 @@
 
 
                 <!-- Right navbar links -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Messages Dropdown Menu -->
 
+                    <div class="user-panel  d-flex">
+                        <div class="image">
+                            <img src="{{ asset('imagenes/' . Auth::user()->imagen) }}" class="img-circle elevation-2"
+                                alt="User Image">
+                        </div>
+                        <div class="info">
+                            <a href="{{ url('/profile') }}" class="d-block">
+                                @guest
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
+                                @else
+                                    {{ Auth::user()->name }}
+
+
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
+                                        @csrf
+                                    </form>
+
+                                @endguest
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">Cerrar Sesión
+                            </a>
+                        </div>
+                    </div>
+                </ul>
             </nav>
             <!-- /.navbar -->
 
@@ -60,32 +91,7 @@
                 <!-- Sidebar -->
                 <div class="sidebar">
                     <!-- Sidebar user panel (optional) -->
-                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                        <div class="image">
-                            <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
-                                alt="User Image">
-                        </div>
-                        <div class="info">
-                            <a href="{{url('/profile')}}" class="d-block">
-                                @guest
-                                    <a class="nav-link"
-                                        href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
-                                @else
-                                    {{ Auth::user()->name }}
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                               document.getElementById('logout-form').submit();">
-                                        Cerrar Sesión
-                                    </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        style="display: none;">
-                                        @csrf
-                                    </form>
-
-                                @endguest
-                            </a>
-                        </div>
-                    </div>
 
                     <!-- Sidebar Menu -->
                     <nav class="mt-2">
@@ -98,32 +104,31 @@
                                     <p>Inicio</p>
                                 </a>
                             </li>
-                            
-                            
-                            @can('administrador')
-                            <li class="nav-item">
-                                <a href="{{ url('usuarios') }}"
-                                    class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Usuarios
-     
-                                    </p>
-                                </a>
-                            </li>
-                            @endcan
-                            
-                            @can('administrador')
-                            <li class="nav-item">
-                                <a href="{{ url('roles') }}"
-                                    class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Roles
 
-                                    </p>
-                                </a>
-                            </li>
+
+                            @can('administrador')
+                                <li class="nav-item">
+                                    <a href="{{ url('usuarios') }}"
+                                        class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fas fa-users"></i>
+                                        <p>
+                                            Usuarios
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+
+                            @can('administrador')
+                                <li class="nav-item">
+                                    <a href="{{ url('roles') }}"
+                                        class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fas fa-users"></i>
+                                        <p>
+                                            Roles
+
+                                        </p>
+                                    </a>
+                                </li>
                             @endcan
 
                         </ul>

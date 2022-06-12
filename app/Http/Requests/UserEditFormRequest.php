@@ -25,8 +25,10 @@ class UserEditFormRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255',
+            'ocupacion' => 'nullable|required|max:255',
+            'estado' => 'nullable|required|max:255',
             'password' => 'confirmed',
-            'imagen' => 'nullable|mimes:jpeg,jpg,png'
+            'imagen' => 'nullable|mimes:jpeg,jpg,png',
         ];
     }
 }

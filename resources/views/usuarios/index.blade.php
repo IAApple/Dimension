@@ -30,7 +30,6 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Email</th>
                     <th scope="col">Rol</th>
-                    <th scope="col">Imagen</th>
                     <th scope="col">Opciones</th>
                 </tr>
             </thead>
@@ -45,9 +44,8 @@
                                 {{$role->name}}
                             @endforeach
                         </td>
-                        <td>
-                            <img src="{{asset('imagenes/')}}" alt="{{$user->imagen}}" height="50px" width="50px"> 
-                        </td>
+
+                            
                         <td>
                             <form action="{{ route('usuarios.destroy', $user->id) }}" method="POST">
                                 <a href="{{ route('usuarios.show', $user->id) }}"><button type="button"

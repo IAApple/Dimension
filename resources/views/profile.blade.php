@@ -6,9 +6,9 @@
     <div class="row align-items-center flex-row-reverse">
         <div class="col-lg-6">
             <div class="about-text go-to">
-                <h5 class="dark-color">Liefheart12</h5>
-                <h6 class="theme-color lead">Diseñador grafico </h6>
-                <p>Mexico, Coahuila</p>
+                <h1 class="dark-color">{{ Auth::user()->name }}</h1>
+                <h6 class="theme-color lead">{{ Auth::user()->ocupacion }}</h6>
+                <p>{{ Auth::user()->estado }}</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores deleniti, maiores aliquid esse repellat delectus consequatur explicabo. Dolorum, voluptate. Sapiente sit ipsa facere minima doloribus, ab sed animi possimus quis.</p>
                 <div class="row about-list">
 
@@ -17,6 +17,8 @@
                             <div class="ratings"> <span class="product-rating">4.6</span><span>/5</span>
                                 <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
                                 <div class="rating-text"> <span> 46 Calificaciones y 15 Opiniones</span> </div>
+                                <br>
+                                <button type="submit" class="btn btn-primary">Solicitar</button>
                             </div>
 
                         </div>
@@ -53,6 +55,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
 
@@ -66,7 +69,8 @@
         </div>
         <div class="col-lg-5 ">
             <div class="about-avatar">
-                <img src="dist/img/arti1.jpg" class="rounded-circle" height="420px">
+                <img src="{{ asset('imagenes/' . Auth::user()->imagen) }}" class="img-circle elevation-2"
+                alt="User Image" width="420">
             </div>
         </div>
     </div>

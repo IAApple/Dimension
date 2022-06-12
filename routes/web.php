@@ -12,7 +12,6 @@ Route::resource('/usuarios', 'UserController');
 
 Route::resource('/roles', 'RoleController');
 
-
 Route::get('/welcome', function () {
     return view('welcome');
 });

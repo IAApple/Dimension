@@ -27,8 +27,10 @@ class UserFormRequest extends FormRequest
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'rol' => 'required',
+            'ocupacion' => 'nullable|required|max:255',
+            'estado' => 'nullable|required|max:255',
             'password' => 'required|min:6|confirmed',
-            'imagen' => 'nullable|mimes:jpeg,jpg,png'
+            'imagen' => 'nullable|mimes:jpeg,jpg,png',
         ];
     }
 }
