@@ -40,8 +40,6 @@ class UserController extends Controller
 
         $usuario->name = request('name');
         $usuario->email = request('email');
-        $usuario->ocupacion = request('ocupacion');
-        $usuario->estado = request('estado');
         $usuario->password = bcrypt(request('password'));
         if ($request->hasFile('imagen')) {
             $file = $request->imagen;

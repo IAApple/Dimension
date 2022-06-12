@@ -4,10 +4,9 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Nombre de usuario: {{$user->name }}</h1>
-            <p class="lead">Correo electronico:{{ $user->email }}</p>
-            <p class="lead">Estado:{{ $user->estado }}</p>
-            <p class="lead">Ocupacion: {{ $user->ocupacion }}</p>
+            <h1 class="display-4">{{ $user->name }}</h1>
+            <p class="lead">{{ $user->email }}</p>
         </div>
+        
     </div>
 @endsection

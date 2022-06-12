@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6182382dcc3e7bcdf5284a41c52107e9",
+    "content-hash": "5e7adfda5f5fff19cbc41320b1afa2dc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -121,77 +121,6 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
-        },
-        {
-            "name": "cmgmyr/messenger",
-            "version": "2.27.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/cmgmyr/laravel-messenger.git",
-                "reference": "d19d3e379caf3385c7f7ad41d66cf79f06c94041"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/cmgmyr/laravel-messenger/zipball/d19d3e379caf3385c7f7ad41d66cf79f06c94041",
-                "reference": "d19d3e379caf3385c7f7ad41d66cf79f06c94041",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/config": "^5.5|^6.0|^7.0|^8.0|^9.0",
-                "illuminate/database": "^5.5|^6.0|^7.0|^8.0|^9.0",
-                "illuminate/support": "^5.5|^6.0|^7.0|^8.0|^9.0",
-                "php": "^7.2|^8.0"
-            },
-            "require-dev": {
-                "doctrine/dbal": "^3.1.2|^2.13.3",
-                "fakerphp/faker": "^1.16",
-                "friendsofphp/php-cs-fixer": "^3.2|^2.18",
-                "orchestra/testbench": "^3.0|^4.0|^5.0|^6.0|^7.0",
-                "phpunit/phpunit": "^8.0|^9.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Cmgmyr\\Messenger\\MessengerServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Cmgmyr\\Messenger\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Chris Gmyr",
-                    "email": "cmgmyr@gmail.com",
-                    "homepage": "https://github.com/cmgmyr",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Simple user messaging tool for Laravel",
-            "keywords": [
-                "Messenger",
-                "laravel",
-                "messaging",
-                "user messaging"
-            ],
-            "support": {
-                "issues": "https://github.com/cmgmyr/laravel-messenger/issues",
-                "source": "https://github.com/cmgmyr/laravel-messenger/tree/2.27.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/cmgmyr",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-02-11T04:31:29+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -630,16 +559,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.7",
+            "version": "6.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "724562fa861e21a4071c652c8a159934e4f05592"
+                "reference": "f092dd734083473658de3ee4bef093ed77d2689c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/724562fa861e21a4071c652c8a159934e4f05592",
-                "reference": "724562fa861e21a4071c652c8a159934e4f05592",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f092dd734083473658de3ee4bef093ed77d2689c",
+                "reference": "f092dd734083473658de3ee4bef093ed77d2689c",
                 "shasum": ""
             },
             "require": {
@@ -725,7 +654,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/6.5.7"
+                "source": "https://github.com/guzzle/guzzle/tree/6.5.6"
             },
             "funding": [
                 {
@@ -741,7 +670,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-09T21:36:50+00:00"
+            "time": "2022-05-25T13:19:12+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1543,16 +1472,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.7.0",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524"
+                "reference": "247918972acd74356b0a91dfaa5adcaec069b6c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/5579edf28aee1190a798bfa5be8bc16c563bd524",
-                "reference": "5579edf28aee1190a798bfa5be8bc16c563bd524",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/247918972acd74356b0a91dfaa5adcaec069b6c0",
+                "reference": "247918972acd74356b0a91dfaa5adcaec069b6c0",
                 "shasum": ""
             },
             "require": {
@@ -1631,7 +1560,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.7.0"
+                "source": "https://github.com/Seldaek/monolog/tree/2.6.0"
             },
             "funding": [
                 {
@@ -1643,7 +1572,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-06-09T08:59:12+00:00"
+            "time": "2022-05-10T09:36:00+00:00"
         },
         {
             "name": "nesbot/carbon",
