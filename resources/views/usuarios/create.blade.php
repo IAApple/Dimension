@@ -30,7 +30,7 @@
                         placeholder="Ingresa tu correo electronico">
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="form-group col-md-6">
                     <label>Contraseña</label>
@@ -40,6 +40,27 @@
                     <label>Confirme Contraseña</label>
                     <input type="password" name="password_confirmation" class="form-control"
                         placeholder="Confirme Contraseña">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Ocupacion</label>
+                    <input type="text" class="form-control" name="ocupacion" placeholder="Ocupacion (Opcional)">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Estado</label>
+                    <input type="text" class="form-control" name="estado" placeholder="Estado (Opcional)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Descripcion</label>
+                    <input type="text" class="form-control" name="descripcion" placeholder="Descripcion (Opcional)">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Enlace cotizacion</label>
+                    <input type="text" class="form-control" name="enlace_cot" placeholder="Enlace (Opcional)">
                 </div>
             </div>
 

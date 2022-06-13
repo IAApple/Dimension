@@ -39,53 +39,59 @@
                         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                     </li>
                 </ul>
-
+                <a href="{{ url('/clausulas') }}">
+                    <button type="submit" class="btn btn-primary">Realizar pago</button>
+                </a>
                 <!-- SEARCH FORM -->
 
 
                 <!-- Right navbar links -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Messages Dropdown Menu -->
+                    <div class="user-panel mb-3 d-flex">
+                        <div class="image">
 
+                            <img src="{{ asset('imagenes/' . Auth::user()->imagen) }}" class="img-circle elevation-2">
+
+                        </div>
+
+                    </div>
+
+                    <div class="info">
+                        <a href="{{ url('/profile') }}" class="d-block">
+                            @guest
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
+                            @else
+                                {{ Auth::user()->name }}
+
+                            @endguest
+
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                               document.getElementById('logout-form').submit();">
+                            Cerrar Sesión
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                            style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </ul>
             </nav>
             <!-- /.navbar -->
 
             <!-- Main Sidebar Container -->
             <aside class="main-sidebar sidebar-dark-primary elevation-4">
                 <!-- Brand Logo -->
-                <a href="{{ url('/') }}" class="brand-link">
-                    <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
-                        class="brand-image img-circle elevation-3" style="opacity: .8">
-                    <span class="brand-text font-weight-light">System Team</span>
-                </a>
+                
 
                 <!-- Sidebar -->
                 <div class="sidebar">
                     <!-- Sidebar user panel (optional) -->
-                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                        <div class="image">
-                            <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
-                                alt="User Image">
-                        </div>
-                        <div class="info">
-                            <a href="{{url('/profile')}}" class="d-block">
-                                @guest
-                                    <a class="nav-link"
-                                        href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
-                                @else
-                                    {{ Auth::user()->name }}
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                               document.getElementById('logout-form').submit();">
-                                        Cerrar Sesión
-                                    </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        style="display: none;">
-                                        @csrf
-                                    </form>
-
-                                @endguest
-                            </a>
-                        </div>
-                    </div>
 
                     <!-- Sidebar Menu -->
                     <nav class="mt-2">
@@ -98,33 +104,36 @@
                                     <p>Inicio</p>
                                 </a>
                             </li>
-                            
-                            
-                            @can('administrador')
-                            <li class="nav-item">
-                                <a href="{{ url('usuarios') }}"
-                                    class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Usuarios
-     
-                                    </p>
-                                </a>
-                            </li>
-                            @endcan
-                            
-                            @can('administrador')
-                            <li class="nav-item">
-                                <a href="{{ url('roles') }}"
-                                    class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Roles
 
-                                    </p>
-                                </a>
-                            </li>
+
+                            @can('administrador')
+                                <li class="nav-item">
+                                    <a href="{{ url('usuarios') }}"
+                                        class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fas fa-users"></i>
+                                        <p>
+                                            Usuarios
+
+                                        </p>
+                                    </a>
+                                </li>
                             @endcan
+
+                            @can('administrador')
+                                <li class="nav-item">
+                                    <a href="{{ url('roles') }}"
+                                        class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fas fa-users"></i>
+                                        <p>
+                                            Roles
+
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+
+
+
 
                         </ul>
                     </nav>

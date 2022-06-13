@@ -3,13 +3,14 @@
 @section('content')
 <div id="container">
     <header>
-        <div class="bg-image d-flex justify-content-center align-items-center" style=" background-image: url('dist/img/fondoF.jpg'); height: 100vh;">
-            <div style="position:relative; right:-650px; top:-270px;">
 
+        <div class="justify-content-center">
+            <div style="position:relative;">
+                <img src="\dist\img\Dimension\Dimension-LogoB2.png">
             </div>
-            <div style="position:relative; right:50px;">
-                <img src="\dist\img\Dimension\Dimension-LogoW3.png">
-            </div>
+        </div>
+            <br>
+            <br>
     </header>
 
     <section id="content">

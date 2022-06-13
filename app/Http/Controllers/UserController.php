@@ -41,6 +41,10 @@ class UserController extends Controller
         $usuario->name = request('name');
         $usuario->email = request('email');
         $usuario->password = bcrypt(request('password'));
+        $usuario->ocupacion = request('ocupacion');
+        $usuario->estado = request('estado');
+        $usuario->descripcion = request('descripcion');
+        $usuario->enlace_cot = request('enlace_cot');
         if ($request->hasFile('imagen')) {
             $file = $request->imagen;
             $file->move(public_path() . '/imagenes', $file->getClientOriginalName());
@@ -70,10 +74,12 @@ class UserController extends Controller
     {
         $this->validate(request(), ['email' => ['required', 'email', 'max:255', 'unique:users,email,' . $id]]);
         $usuario = User::findOrFail($id);
-
         $usuario->name = $request->get('name');
         $usuario->email = $request->get('email');
-
+        $usuario->ocupacion = $request->get('ocupacion');
+        $usuario->estado = $request->get('estado');
+        $usuario->descripcion = $request->get('descripcion');
+        $usuario->enlace_cot = $request->get('enlace_cot');
         if ($request->hasFile('imagen')) {
             $file = $request->imagen;
             $file->move(public_path() . '/imagenes', $file->getClientOriginalName());
