@@ -13,13 +13,18 @@ Route::resource('/usuarios', 'UserController');
 
 Route::resource('/roles', 'RoleController');
 
+Route::resource('/forms', 'FormController');
+
+Route::get('/registercot', function () {
+    return view('registercot');
+});
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/clausulas', function () {
-    return view('clausulas');
+Route::get('/cotizaciones', function () {
+    return view('cotizaciones');
 });
 
 

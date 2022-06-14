@@ -113,7 +113,6 @@
                                         <i class="nav-icon fas fa-users"></i>
                                         <p>
                                             Usuarios
-
                                         </p>
                                     </a>
                                 </li>
@@ -131,7 +130,18 @@
                                     </a>
                                 </li>
                             @endcan
-
+                            @can('administrador')
+                            <li class="nav-item">
+                                <a href="{{ url('seguimiento') }}"
+                                    class="{{ Request::path() === 'seguimiento' ? 'nav-link active' : 'nav-link' }}">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Seguimiento
+                                    </p>
+                                </a>
+                            </li>
+                        @endcan
+                                
 
 
 
