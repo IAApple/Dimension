@@ -23,26 +23,26 @@
                 <div class="form-group col-md-6">
                     <label>Correo Electronico</label>
                     <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
-                        placeholder="Ingresa tu correo electronico">
+                        placeholder="Ingresa tu correo electronico" value="{{ $form->email }}">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Especificaciones</label>
-                    <input type="text" name="especificaciones" class="form-control" placeholder="Especificaciones...">
+                    <input type="text" name="especificaciones" class="form-control" placeholder="Especificaciones..." value="{{ $form->especificaciones }}">
                 </div>
 
 
                 <div class="form-group col-md-6">
                     <label>Dimensiones</label>
-                    <input type="text" class="form-control" name="dimensiones" placeholder="Dimensiones (Opcional)">
+                    <input type="text" class="form-control" name="dimensiones" placeholder="Dimensiones (Opcional)" value="{{ $form->dimensiones}}">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Referencia</label>
-                    <input type="text" class="form-control" name="referencia" placeholder="Referencia (Opcional)">
+                    <input type="text" class="form-control" name="referencia" placeholder="Referencia (Opcional)"value="{{ $form->referencia }}">
                 </div>
 
                 <div class="form-group col-md-6">
                     <label>Tipo</label>
-                    <input type="text" class="form-control" name="tipo" placeholder="Tipo ">
+                    <input type="text" class="form-control" name="tipo" placeholder="Tipo "value="{{ $form->tipo }}">
                 </div>
 
 

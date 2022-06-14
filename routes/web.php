@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MessagesController;
 
 Auth::routes();
 
@@ -50,11 +49,3 @@ Route::get('/DB', function () {
     return view('DBTest');
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'messages', 'as' => 'messages'], function () {
-    Route::get('/', [MessagesController::class, 'index']);
-    Route::get('create', [MessagesController::class, 'create'])->name('.create');
-    Route::post('/', [MessagesController::class, 'store'])->name('.store');
-    Route::get('{thread}', [MessagesController::class, 'show'])->name('.show');
-    Route::put('{thread}', [MessagesController::class, 'update'])->name('.update');
-    Route::delete('{thread}', [MessagesController::class, 'destroy'])->name('.destroy');
-});

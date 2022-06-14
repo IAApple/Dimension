@@ -132,8 +132,8 @@
                             @endcan
                             @can('administrador')
                             <li class="nav-item">
-                                <a href="{{ url('seguimiento') }}"
-                                    class="{{ Request::path() === 'seguimiento' ? 'nav-link active' : 'nav-link' }}">
+                                <a href="{{ url('forms') }}"
+                                    class="{{ Request::path() === 'forms' ? 'nav-link active' : 'nav-link' }}">
                                     <i class="nav-icon fas fa-users"></i>
                                     <p>
                                         Seguimiento

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FormsEditFormRequest;
+use App\Http\Requests\FormsFormRequest;
 use Illuminate\Http\Request;
 use App\Form;
 
@@ -42,7 +44,9 @@ class FormController extends Controller
         $forms = new Form();
         $forms->email = request('email');
         $forms->especificaciones = request('especificaciones');
-        $forms->email = request('email');
+        $forms->referencia = request('referencia');
+        $forms->tipo = request('tipo');
+        $forms->dimensiones = request('dimensiones');
 
 
 
@@ -61,7 +65,7 @@ class FormController extends Controller
      */
     public function show($id)
     {
-        
+        return view('forms.show', ['forms' => Form::findOrFail($id)]);
     }
 
     /**
@@ -72,7 +76,9 @@ class FormController extends Controller
      */
     public function edit($id)
     {
-        //
+        $forms = Form::findOrFail($id);
+
+       return view('forms.edit', ['form' => $forms]);
     }
 
     /**
@@ -82,9 +88,17 @@ class FormController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(FormsEditFormRequest $request, $id)
     {
-        //
+        
+        $forms = Form::findOrFail($id);
+        $forms->descripcion = $request->get('descripcion');
+        $forms->email = $request->get('email');
+        $forms->referencia = $request->get('referenica');
+        $forms->tipo = $request->get('tipo');
+        $forms->update();
+
+        return redirect('/forms');
     }
 
     /**
@@ -95,6 +109,10 @@ class FormController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $forms = Form::findOrFail($id);
+
+        $forms->delete();
+
+        return redirect('/forms');
     }
 }

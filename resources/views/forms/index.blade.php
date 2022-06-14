@@ -6,11 +6,8 @@
                     </button></a> </h2>
                     <form class="form-inline ml-3">
                         <div class="input-group input-group-sm">
-                            <input class="form-control form-control-navbar" name="search" type="search" placeholder="Buscar"
-                                aria-label="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-navbar" type="submit">
-                                    <i class="fas fa-search"></i>
+
+                                    
                                 </button>
                             </div>
                         </div>
@@ -35,6 +32,18 @@
                         <td>{{ $form->dimensiones}}</td>
                         <td>{{ $form->referencia}}</td>
                         <td>{{ $form->tipo}}</td>
+                        </td>
+                        <td>
+
+                            <form action="{{ route('forms.destroy', $form->id) }}" method="POST">
+                                <a href="{{ route('forms.show', $form->id) }}"><button type="button"
+                                    class="btn btn-secondary btn-sm">Ver</button></a>
+                                    <a href="{{ route('forms.edit', $form->id) }}"><button type="button"
+                                        class="btn btn-primary btn-sm">Editar</button></a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
                         </td>
                     </tr>
 
