@@ -16,7 +16,7 @@
                 @endif
             </div>
         </div>
-        <form action="/forms" method="POST" enctype="multipar/form-data">
+        <form action="{{ route('forms.update', $form->id) }}" enctype="multipart/form-data">
             @csrf
 
 
@@ -48,8 +48,7 @@
 
 
                 <div class="row">
-
-                    <button type="submit" class="btn btn-primary">Subir</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
 
                     <button type="reset" class="btn btn-danger">Cancelar</button>
                 </div>

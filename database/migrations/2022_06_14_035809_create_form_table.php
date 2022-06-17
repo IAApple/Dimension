@@ -16,6 +16,7 @@ class CreateFormTable extends Migration
         Schema::create('form', function (Blueprint $table) {
             $table->id();
             $table->string('email');
+            $table->string('cuentaUsuario');
             $table->string('especificaciones');
             $table->string('dimensiones');
             $table->string('referencia');

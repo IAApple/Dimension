@@ -46,9 +46,11 @@
                             @endforeach
                         </td>
                         <td>
-                            <img src="{{asset('imagenes/')}}" alt="{{$user->imagen}}" height="50px" width="50px"> 
+                            <img src="{{ asset('imagenes/' . $user->imagen) }}" class="img-circle"
+                            height="50px">
                         </td>
                         <td>
+
                             <form action="{{ route('usuarios.destroy', $user->id) }}" method="POST">
                                 <a href="{{ route('usuarios.show', $user->id) }}"><button type="button"
                                         class="btn btn-secondary btn-sm">Ver</button></a>

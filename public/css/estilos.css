@@ -1,10 +1,9 @@
 
 body{
-    background: #343744;
+    /*background: #C1C3D8;*/
     font-family: 'Montserrat', sans-serif;
-    color:white;
 }
-#container{
+/*#container{
     /*Tamano de un contenedor*/ 
 
    /* Margen de un contenedor*/
@@ -12,18 +11,18 @@ body{
     /*width: 1100px;*/
     /*borde de algun color y tamano*/
 
-}
+/*}
 
-header{
+/*header{
     /*height:100px;
     width:100%;
     margin:0px;
     text-align:center;
     line-height:100px ;
     */
-}
+/*}
 
-.slide {
+/*.slide {
     margin-top:10px;
 }
 
@@ -40,3 +39,4 @@ header{
 .alignleft {
         float: left;
     }
+    */

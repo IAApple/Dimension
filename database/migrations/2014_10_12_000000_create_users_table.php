@@ -21,6 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('ocupacion')->nullable();
             $table->string('estado')->nullable();
+            $table->bigInteger('habilidad1')->nullable();
+            $table->bigInteger('habilidad2')->nullable();            
+            $table->bigInteger('habilidad3')->nullable();
+            $table->bigInteger('habilidad4')->nullable();
             $table->string('descripcion')->nullable();
             $table->string('enlace_cot')->nullable();
             $table->rememberToken();

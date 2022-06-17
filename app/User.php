@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function tieneRol(){
         return $this->roles->flatten()->pluck('name')->unique();
     }
+
+    public function files(){
+        return $this->hasMany('App\File');
+    }
 }

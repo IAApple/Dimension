@@ -7,12 +7,16 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::resource('/files', 'FileController');
+
 Route::resource('/usuarios', 'UserController');
 //Route::resource('/usuarios', 'UserController') -> middleware('auth');
 
 Route::resource('/roles', 'RoleController');
 
 Route::resource('/forms', 'FormController');
+
+Route::resource('/vistausuarios', 'VistaUsuariosController');
 
 Route::get('/registercot', function () {
     return view('registercot');
@@ -31,9 +35,6 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/chat', function () {
-    return view('chat');
-});
 
 Route::get('/imagenC', function () {
     return view('imagenC');

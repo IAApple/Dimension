@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserEditFormRequest;
+use App\Http\Requests\UserFormRequest;
 use App\Http\Requests\FormsEditFormRequest;
 use App\Http\Requests\FormsFormRequest;
 use Illuminate\Http\Request;
 use App\Form;
+use App\User;
+
 
 class FormController extends Controller
 {
@@ -44,6 +48,7 @@ class FormController extends Controller
         $forms = new Form();
         $forms->email = request('email');
         $forms->especificaciones = request('especificaciones');
+        $forms->cuentaUsuario = request('cuentaUsuario');
         $forms->referencia = request('referencia');
         $forms->tipo = request('tipo');
         $forms->dimensiones = request('dimensiones');

@@ -44,7 +44,12 @@ class UserController extends Controller
         $usuario->ocupacion = request('ocupacion');
         $usuario->estado = request('estado');
         $usuario->descripcion = request('descripcion');
-        $usuario->enlace_cot = request('enlace_cot');
+        $usuario->enlace_cot = request('enlace_cot'); 
+        $usuario->habilidad1 = request('habilidad1');
+        $usuario->habilidad2 = request('habilidad2');
+        $usuario->habilidad3 = request('habilidad3');
+        $usuario->habilidad4 = request('habilidad4');
+
         if ($request->hasFile('imagen')) {
             $file = $request->imagen;
             $file->move(public_path() . '/imagenes', $file->getClientOriginalName());

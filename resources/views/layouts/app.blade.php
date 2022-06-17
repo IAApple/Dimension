@@ -25,6 +25,7 @@
     <!-- Styles -->
     <link href="{{ asset('dist/css/adminlte.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -38,27 +39,27 @@
                     <li class="nav-item">
                         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
                     </li>
+
                 </ul>
-                <a href="{{ url('/clausulas') }}">
-                    <button type="submit" class="btn btn-primary">Realizar pago</button>
-                </a>
+
+
                 <!-- SEARCH FORM -->
 
 
                 <!-- Right navbar links -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Messages Dropdown Menu -->
-                    <div class="user-panel mb-3 d-flex">
+                    <div class="user-panel d-flex">
                         <div class="image">
 
-                            <img src="{{ asset('imagenes/' . Auth::user()->imagen) }}" class="img-circle elevation-2">
+                            <img src="{{ asset('imagenes/' . Auth::user()->imagen) }}" class="img-circle">
 
                         </div>
 
                     </div>
 
                     <div class="info">
-                        <a href="{{ url('/profile') }}" class="d-block">
+                        <a href="{{ url('profile') }}" class="d-block">
                             @guest
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                             @else
@@ -74,8 +75,7 @@
                             Cerrar Sesión
                         </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                            style="display: none;">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
                     </div>
@@ -84,15 +84,11 @@
             <!-- /.navbar -->
 
             <!-- Main Sidebar Container -->
-            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <aside class="main-sidebar sidebar-dark-primary">
                 <!-- Brand Logo -->
-                
-
                 <!-- Sidebar -->
                 <div class="sidebar">
                     <!-- Sidebar user panel (optional) -->
-
-
                     <!-- Sidebar Menu -->
                     <nav class="mt-2">
                         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
@@ -121,7 +117,7 @@
                             @can('administrador')
                                 <li class="nav-item">
                                     <a href="{{ url('roles') }}"
-                                        class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
+                                        class="{{ Request::path() === 'roles' ? 'nav-link active' : 'nav-link' }}">
                                         <i class="nav-icon fas fa-users"></i>
                                         <p>
                                             Roles
@@ -131,17 +127,39 @@
                                 </li>
                             @endcan
                             @can('administrador')
+                                <li class="nav-item">
+                                    <a href="{{ url('forms') }}"
+                                        class="{{ Request::path() === 'forms' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="fa-solid fa-file-circle-check"></i>
+                                        <p>
+                                            Seguimiento
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+
                             <li class="nav-item">
-                                <a href="{{ url('forms') }}"
-                                    class="{{ Request::path() === 'forms' ? 'nav-link active' : 'nav-link' }}">
+                                <a href="{{ url('vistausuarios') }}"
+                                    class="{{ Request::path() === 'vistausuarios' ? 'nav-link active' : 'nav-link' }}">
                                     <i class="nav-icon fas fa-users"></i>
                                     <p>
-                                        Seguimiento
+                                        Perfiles
+
                                     </p>
                                 </a>
                             </li>
-                        @endcan
-                                
+                            <li class="nav-item">
+                                <a href="{{ url('files') }}"
+                                    class="{{ Request::path() === 'files' ? 'nav-link active' : 'nav-link' }}">
+                                    <i class="fa-solid fa-image"></i>
+                                    <p>
+                                        Imagenes
+
+                                    </p>
+                                </a>
+                            </li>
+
+
 
 
 
@@ -155,9 +173,6 @@
             <!-- Content Wrapper. Contains page content -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
-                <div class="content-header">
-
-                </div>
                 <!-- /.content-header -->
 
                 <!-- Main content -->
@@ -175,6 +190,8 @@
             <!-- /.control-sidebar -->
         </div>
     </div>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <@yield('js')
 </body>
 
 </html>
