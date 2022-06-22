@@ -132,14 +132,11 @@
                 <div class="form-group col-md-6">
                     <label>Imagen</label>
                     <input type="file" name="imagen" class="form-control">
-                </div>
-
-                
+                </div>   
             </div>
-            <div class="row">
-
+            <div class="form-group col-md-6">
                 <button type="submit" class="btn btn-primary">Subir</button>
-                <br>
+
                 <button type="reset" class="btn btn-danger">Cancelar</button>
             </div>
         </form>

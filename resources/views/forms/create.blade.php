@@ -5,15 +5,15 @@
         <div class="row">
             <div class="col-sm-6">
                 <h1>Crear nueva cotizacion</h2>
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
             </div>
         </div>
         <form action="/forms" method="POST" enctype="multipar/form-data">
@@ -32,10 +32,11 @@
             </div>
 
             <div class="form-group col-md-6">
-                <label>Especificaciones</label>        
+                <label>Especificaciones</label>
                 <div class="form-group">
-                    <textarea  name="especificaciones" class="form-control"  idplaceholder="Especificaciones..." rows="5" id="comment"></textarea>
-                  </div> 
+                    <textarea name="especificaciones" class="form-control" idplaceholder="Especificaciones..." rows="5"
+                        id="comment"></textarea>
+                </div>
             </div>
 
 
@@ -53,16 +54,17 @@
                 <input type="text" class="form-control" name="tipo" placeholder="Tipo ">
             </div>
 
-            <div class="row">
+            {{-- <div class="row">
                 <a href="https://paypal.me/dimensioncomis" target="_blank">
                     <div class="btn btn-primary">Proceder al pago</div>
                 </a>
                 
-            </div>
+            </div> --}}
+
             <br>
-            <div class="row">
+            <div class="form-group col-md-6">
                 <button type="submit" class="btn btn-primary">Subir </button>
-                <br>
+
                 <button type="reset" class="btn btn-danger">Cancelar</button>
             </div>
         </form>

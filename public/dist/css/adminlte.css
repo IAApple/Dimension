@@ -10681,9 +10681,7 @@ body,
   position: relative;
 }
 
-.wrapper .content-wrapper {
-  min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px));
-}
+
 
 .layout-boxed .wrapper {
   box-shadow: 0 0 10 rgba(0, 0, 0, 0.3);
@@ -11738,13 +11736,7 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
   }
 }
 
-@media (max-width: 991.98px) {
-  .sidebar-mini-xs .content-wrapper,
-  .sidebar-mini-xs .main-footer,
-  .sidebar-mini-xs .main-header {
-    margin-left: 4.6rem;
-  }
-}
+
 
 .content-wrapper {
   background-color: #f4f6f9;

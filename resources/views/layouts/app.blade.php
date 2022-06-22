@@ -33,7 +33,7 @@
         <div class="wrapper">
 
             <!-- Navbar -->
-            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <nav class="main-header navbar navbar-expand navbar-white navbar-dark bg-dark navbar-light">
                 <!-- Left navbar links -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -51,7 +51,7 @@
                             <img src="{{ asset('imagenes/' . Auth::user()->imagen) }}" class="img-circle">
                         </div>
                     </div>
-
+                    <p>&nbsp;&nbsp;</p>
                     <div class="info">
                         <a href="{{ url('profile') }}" class="d-block">
                             @guest
@@ -63,6 +63,24 @@
 
                         </a>
                     </div>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    <div class="text-white">
+                        <div class="row">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                               document.getElementById('logout-form').submit();">
+                                
+                                Cerrar Sesión
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </div>
+
+
 
                 </ul>
             </nav>
@@ -87,7 +105,62 @@
                                 </a>
                             </li>
 
+                            <li class="nav-item">
+                                <a href="{{ url('vistausuarios') }}"
+                                    class="{{ Request::path() === 'vistausuarios' ? 'nav-link active' : 'nav-link' }}">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Perfiles
 
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ url('files') }}"
+                                    class="{{ Request::path() === 'files' ? 'nav-link active' : 'nav-link' }}">
+                                    <i class="fa-solid fa-image"></i>
+                                    <p>
+                                        Imagenes
+
+                                    </p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{{ url('vistaforms') }}"
+                                    class="{{ Request::path() === 'vistaforms' ? 'nav-link active' : 'nav-link' }}">
+                                    <i class="fa-solid fa-file-circle-check"></i>
+                                    <p>
+                                        Crear cotización
+                                    </p>
+                                </a>
+                            </li>
+                            @can('administrador')
+                                <li class="nav-item">
+                                    <a href="{{ url('about') }}"
+                                        class="{{ Request::path() === 'about' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="fa-solid fa-user-tie"></i>
+
+
+                                        <p>
+                                            Sobre nosotros
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+
+                            @can('administrador')
+                                <div class="white-text">
+                                    <li class="nav-item ">
+                                        <div class="{{ Request::path() === 'forms' ? 'nav-link active' : 'nav-link' }}">
+
+                                            <p>
+                                                Administracion
+                                            </p>
+                                            </a>
+                                    </li>
+                                </div>
+                            @endcan
                             @can('administrador')
                                 <li class="nav-item">
                                     <a href="{{ url('usuarios') }}"
@@ -124,49 +197,7 @@
                                 </li>
                             @endcan
 
-                            <li class="nav-item">
-                                <a href="{{ url('vistausuarios') }}"
-                                    class="{{ Request::path() === 'vistausuarios' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fas fa-users"></i>
-                                    <p>
-                                        Perfiles
 
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('files') }}"
-                                    class="{{ Request::path() === 'files' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="fa-solid fa-image"></i>
-                                    <p>
-                                        Imagenes
-
-                                    </p>
-                                </a>
-                            </li>
-   
-                                <li class="nav-item">
-                                    <a href="{{ url('vistaforms') }}"
-                                        class="{{ Request::path() === 'vistaforms' ? 'nav-link active' : 'nav-link' }}">
-                                        <i class="fa-solid fa-file-circle-check"></i>
-                                        <p>
-                                            Crear cotización
-                                        </p>
-                                    </a>
-                                </li>
-
-                                <div class="row">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();">
-                                        Cerrar Sesión
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
 
 
 
