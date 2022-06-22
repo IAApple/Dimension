@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <br>
         <h2> Lista de usuarios <a href="usuarios/create"><button type="button" class="btn btn-success float-right">Agregar
                     usuario</button></a> </h2>
                     <form class="form-inline ml-3">

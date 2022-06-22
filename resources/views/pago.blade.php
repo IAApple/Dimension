@@ -22,14 +22,14 @@
                 <div class="container py-5">
                     <div class="row h-100 align-items-center py-5">
                         <div class="col-lg-6">
-                            <h1 class="display-4">Proceso de cotización</h1>
-                            <p class="lead text-muted mb-0">Ingrese una petición de cotización, misma que nosotros nos
-                                encargaremos luego de llevar al usuario que le ha interesado.</p>
-                            <p class="lead text-muted mb-0">Recuerde ingresar su correo electronico y el del artista de su interes.</p>
-                            <br>
+                            <h1 class="display-4">Proceso de pago</h1>
+                            <p class="lead text-muted mb-0">Realize su pago, recuerde adjuntar el codigo que se le
+                                proporcionó vía correo electronico en el asunto del pago con el fin de ser capaces de dar
+                                seguimiento e identificar su pedido.</p>
+                            </p>
+
                             <div class="container">
-                                <a href="vistaforms/create"><button type="button" class="btn btn-dark btn-lg">Agregar
-                                        cotizacion
+                                <a href="https://paypal.me/dimensioncomis" target="_blank"><button type="button" class="btn btn-dark btn-lg">Proceder a pago
                                     </button></a>
                                 <form class="form-inline ml-3">
                                     <div class="input-group input-group-sm">

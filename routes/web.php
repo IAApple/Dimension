@@ -11,7 +11,7 @@ Route::resource('/files', 'FileController');
 
 Route::resource('/usuarios', 'UserController');
 //Route::resource('/usuarios', 'UserController') -> middleware('auth');
-
+Route::resource('/admin', 'AdminController');
 Route::resource('/roles', 'RoleController');
 
 Route::resource('/forms', 'FormController');
@@ -24,6 +24,14 @@ Route::resource('/profile', 'ProfileController');
 
 Route::get('/registercot', function () {
     return view('registercot');
+});
+
+Route::get('/pago', function () {
+    return view('pago');
+});
+
+Route::get('/capacitacion', function () {
+    return view('capacitacion');
 });
 
 Route::get('/about', function () {

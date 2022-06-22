@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<br>
     <div class="container">
         <h2> Seguimiento a cotizaciones <a href="forms/create"><button type="button" class="btn btn-success float-right">Agregar cotizacion
                     </button></a> </h2>
@@ -16,7 +17,8 @@
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Correo</th>
+                    <th scope="col">Correo del comprador</th>
+                    <th scope="col">Correo del artista</th>
                     <th scope="col">Especificaciones</th>
                     <th scope="col">Dimensiones</th>
                     <th scope="col">Referencia</th>
@@ -27,7 +29,8 @@
                 @foreach ($forms as $form)
                     <tr>
                         <th scope="row">{{ $form->id }}</th>
-                        <td>{{ $form->correo }}</td>
+                        <td>{{ $form->email }}</td>
+                        <td>{{ $form->cuentaUsuario }}</td>
                         <td>{{ $form->especificaciones }}</td>
                         <td>{{ $form->dimensiones}}</td>
                         <td>{{ $form->referencia}}</td>
