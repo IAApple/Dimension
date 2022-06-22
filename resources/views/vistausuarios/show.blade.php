@@ -19,6 +19,7 @@
         <div class="row align-items-center flex-row-reverse">
             <div class="col-lg-6">
                 <div class="about-text go-to">
+                    
                     <h1 class="dark-color">{{ $user->name }}</h1>
                     <h6 class="theme-color lead">{{$user->ocupacion }}</h6>
                     <h6 class="dark-color">Contacto: {{ $user->email }}</h6>
@@ -82,7 +83,23 @@
 
                 </div>
             </div>
-           
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card-columns">
+                            @foreach ($files as $file)
+                                <div class="card">
+                                    <img class="card-img-top" src="{{ asset($file->url) }}" alt="" class="img-fluid">
+              
+                                </div>
+                            @endforeach
+                            <div class="col-12">
+                                {{$files->links()}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

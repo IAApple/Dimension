@@ -66,7 +66,27 @@
                 <div class="about-avatar">
                     <img src="{{ asset('imagenes/' . Auth::user()->imagen) }}" class="img-circle elevation-2"
                         height="420">
+                        <p>&nbsp;&nbsp;</p>
 
+                </div>
+            </div>
+            
+            <p>&nbsp;&nbsp;</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card-columns">
+                            @foreach ($files as $file)
+                                <div class="card">
+                                    <img class="card-img-top" src="{{ asset($file->url) }}" alt="" class="img-fluid">
+                        
+                                </div>
+                            @endforeach
+                            <div class="col-12">
+                                {{$files->links()}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

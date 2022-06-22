@@ -82,13 +82,7 @@
                         <!-- /.col -->
                     </div>
 
-                    <p class="mb-1">
-                        @if (Route::has('password.request'))
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                {{ __('¿Olvidaste tu contraseña?') }}
-                            </a>
-                        @endif
-                    </p>
+                    
                     <p class="mb-0">
                         <a class="btn btn-link" href="{{ route('register') }}">
                             {{ __('Registrar un nuevo usuario') }}

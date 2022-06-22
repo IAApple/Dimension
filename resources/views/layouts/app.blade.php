@@ -41,11 +41,7 @@
                     </li>
 
                 </ul>
-
-
                 <!-- SEARCH FORM -->
-
-
                 <!-- Right navbar links -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Messages Dropdown Menu -->
@@ -53,9 +49,7 @@
                         <div class="image">
 
                             <img src="{{ asset('imagenes/' . Auth::user()->imagen) }}" class="img-circle">
-
                         </div>
-
                     </div>
 
                     <div class="info">
@@ -69,16 +63,7 @@
 
                         </a>
                     </div>
-                    <div class="row">
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                               document.getElementById('logout-form').submit();">
-                            Cerrar Sesión
-                        </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
                 </ul>
             </nav>
             <!-- /.navbar -->
@@ -95,7 +80,8 @@
                             data-accordion="false">
 
                             <li class="nav-item">
-                                <a href="/" class="{{ Request::path() === '/' ? 'nav-link active' : 'nav-link' }}">
+                                <a href="/"
+                                    class="{{ Request::path() === '/' ? 'nav-link active' : 'nav-link' }}">
                                     <i class="nav-icon fas fa-home"></i>
                                     <p>Inicio</p>
                                 </a>
@@ -158,6 +144,30 @@
                                     </p>
                                 </a>
                             </li>
+   
+                                <li class="nav-item">
+                                    <a href="{{ url('vistaforms') }}"
+                                        class="{{ Request::path() === 'vistaforms' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="fa-solid fa-file-circle-check"></i>
+                                        <p>
+                                            Crear cotización
+                                        </p>
+                                    </a>
+                                </li>
+
+                                <div class="row">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                       document.getElementById('logout-form').submit();">
+                                        Cerrar Sesión
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+
 
 
 
@@ -191,7 +201,6 @@
         </div>
     </div>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <@yield('js')
-</body>
+    <@yield('js') </body>
 
 </html>

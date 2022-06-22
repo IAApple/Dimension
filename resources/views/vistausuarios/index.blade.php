@@ -70,7 +70,7 @@
                         @endforeach
                     </tbody>
                 </table>
-
+                
                 <div class="row">
                     <div class="mx-auto">
                         {{ $users->links() }}

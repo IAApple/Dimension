@@ -32,10 +32,8 @@
             </div>
 
             <div class="form-group col-md-6">
-                <label>Especificaciones</label>        
-                <div class="form-group">
-                    <textarea  name="especificaciones" class="form-control"  idplaceholder="Especificaciones..." rows="5" id="comment"></textarea>
-                  </div> 
+                <label>Especificaciones</label>
+                <input type="text" name="especificaciones" class="form-control" placeholder="Especificaciones...">
             </div>
 
 

@@ -63,7 +63,10 @@ class VistaUsuariosController extends Controller
 
     public function show($id)
     {
-        return view('vistausuarios.show', ['user' => User::findOrFail($id)]);
+        $files = File::paginate(20);
+
+
+        return view('vistausuarios.show', ['user' => User::findOrFail($id)], compact('files'));
         
     }
 

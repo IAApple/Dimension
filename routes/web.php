@@ -18,6 +18,10 @@ Route::resource('/forms', 'FormController');
 
 Route::resource('/vistausuarios', 'VistaUsuariosController');
 
+Route::resource('/vistaforms', 'VistaFormController');
+
+Route::resource('/profile', 'ProfileController');
+
 Route::get('/registercot', function () {
     return view('registercot');
 });
@@ -28,11 +32,6 @@ Route::get('/welcome', function () {
 
 Route::get('/cotizaciones', function () {
     return view('cotizaciones');
-});
-
-
-Route::get('/profile', function () {
-    return view('profile');
 });
 
 

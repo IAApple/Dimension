@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\File;
+use App\User;
 
 class ProfileController extends Controller
 {
@@ -14,10 +15,9 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $files = File::paginate(20);
+        $files = File::where('user_id', auth()->user()->id)->paginate(20);
 
         return view('profile', compact('files'));
-
     }
 
     /**
@@ -49,7 +49,7 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('files.show');
     }
 
     /**
