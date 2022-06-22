@@ -23,16 +23,24 @@
             <div class="container py-5">
                 <div class="row h-100 align-items-center py-5">
                     <div class="col-lg-6">
-                        <h1 class="display-4">Sobre nosotros</h1>
-                        <p class="lead text-muted mb-0">Dimension es una plataforma dedicada al sector artistico,
-                            especificamente dibujo digital, nuestro objetivo es lograr brindar seguridad y asistir con todo
-                            el compromiso a nuestros artistas y compradores.</p>
+                        <h1 class="display-4">¿Como funcionamos?</h1>
+                        <p class="lead text-muted mb-0">Los moderadores revisarán periodicamente la ventana de cotizaciones
+                            en espera de una nueva, esto con el fin de que actúen como los intermediarios dentro de la
+                            compra.
                         </p>
                         <br>
-                        <p class="lead text-muted mb-0">DIMENSION es una plataforma dedicada al público mexicano, ya que si bien, hay plataformas que
-                            podrían tener rasgos similares, nosotros tratamos de abarcar lo necesario y además, cubrir un
-                            público que regularmente no se toma en cuenta.
+                        <p class="lead text-muted mb-0">
+                            Cuando una cotización aparezca, el moderador debe ponerse en contacto con el artista, con el fin
+                            de comentarle sobre la cotización requerida, entonces se queda a la espera de una respuesta.
                         </p>
+                        <br>
+                        <p class="lead text-muted mb-0">
+                            Una vez la respuesta llega, se enviará un correo al usuario donde se informará sobre si fue
+                            aceptada o rechazada (En caso de ser rechazada, se recomienda invitarle a realizar una nueva
+                            cotización con otro artista), de ser aceptada, se le enviará el precio y el moderador le
+                            proporcionará una clave con el fin de saber a qué cotización se da seguimiento.
+                        </p>
+
                     </div>
                     <div class="col-lg-6 d-none d-lg-block"> <img src="\dist\img\Dimension\Dimension-LogoB.png"
                             alt="" class="img-fluid">

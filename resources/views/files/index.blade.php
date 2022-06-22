@@ -30,7 +30,7 @@
                         <div class="card">
                             <img class="card-img-top" src="{{ asset($file->url) }}" alt="" class="img-fluid">
                             <div class="card-footer">
-                                <a href="{{route('files.edit', $file)}}" class="btn btn-primary">Editar</a>
+
                                 <form action="{{route('files.destroy', $file)}}" class="d-inline" method="POST">
                                     @method('DELETE')
                                     @csrf

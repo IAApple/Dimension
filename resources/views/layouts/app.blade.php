@@ -66,11 +66,11 @@
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     <div class="text-white">
                         <div class="row">
-                            
+
                             <a type="button" class="btn btn-light" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">
-                                
+
                                 Cerrar Sesión
                             </a>
 
@@ -146,19 +146,31 @@
                                     </p>
                                 </a>
                             </li>
-                            @can('administrador')
-                                <li class="nav-item">
-                                    <a href="{{ url('about') }}"
-                                        class="{{ Request::path() === 'about' ? 'nav-link active' : 'nav-link' }}">
-                                        <i class="nav-icon fa-solid fa-user-tie"></i>
+
+                            <li class="nav-item">
+                                <a href="{{ url('about') }}"
+                                    class="{{ Request::path() === 'about' ? 'nav-link active' : 'nav-link' }}">
+                                    <i class="nav-icon fa-solid fa-user-tie"></i>
 
 
-                                        <p>
-                                            Sobre nosotros
-                                        </p>
-                                    </a>
-                                </li>
-                            @endcan
+                                    <p>
+                                        Sobre nosotros
+                                    </p>
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="{{ url('como') }}"
+                                    class="{{ Request::path() === 'como' ? 'nav-link active' : 'nav-link' }}">
+                                    <i class="nav-icon fa-solid fa-user-tie"></i>
+
+
+                                    <p>
+                                        ¿Como funcionamos?
+                                    </p>
+                                </a>
+                            </li>
+
 
                             @can('administrador')
                                 <div class="white-text">
@@ -172,7 +184,31 @@
                                     </li>
                                 </div>
                             @endcan
+
+                            @can('moderador')
+                                <div class="white-text">
+                                    <li class="nav-item ">
+                                        <div class="{{ Request::path() === 'forms' ? 'nav-link active' : 'nav-link' }}">
+
+                                            <p>
+                                                Moderador
+                                            </p>
+                                            </a>
+                                    </li>
+                                </div>
+                            @endcan
                             @can('administrador')
+                                <li class="nav-item">
+                                    <a href="{{ url('usuarios') }}"
+                                        class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fas fa-users"></i>
+                                        <p>
+                                            Usuarios
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('moderador')
                                 <li class="nav-item">
                                     <a href="{{ url('usuarios') }}"
                                         class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
@@ -196,7 +232,19 @@
                                     </a>
                                 </li>
                             @endcan
+
                             @can('administrador')
+                                <li class="nav-item">
+                                    <a href="{{ url('forms') }}"
+                                        class="{{ Request::path() === 'forms' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fa-solid fa-file-circle-check"></i>
+                                        <p>
+                                            Seguimiento
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('moderador')
                                 <li class="nav-item">
                                     <a href="{{ url('forms') }}"
                                         class="{{ Request::path() === 'forms' ? 'nav-link active' : 'nav-link' }}">
@@ -218,25 +266,39 @@
                                     </a>
                                 </li>
                             @endcan
+                            @can('moderador')
+                                <li class="nav-item">
+                                    <a href="{{ url('admin') }}"
+                                        class="{{ Request::path() === 'admin' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fa-solid fa-image"></i>
+                                        <p>
+                                            Eliminar imagen
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
                             @can('administrador')
-                            <li class="nav-item">
-                                <a href="{{ url('capacitacion') }}"
-                                    class="{{ Request::path() === 'capacitacion' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fa-solid fa-building-columns"></i>
-                                    <p>
-                                        Capacitacion a moderadores
-                                    </p>
-                                </a>
-                            </li>
-                        @endcan
-                            
-
-
-
-
-
-
-
+                                <li class="nav-item">
+                                    <a href="{{ url('capacitacion') }}"
+                                        class="{{ Request::path() === 'capacitacion' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fa-solid fa-building-columns"></i>
+                                        <p>
+                                            Capacitacion a moderadores
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                            @can('moderador')
+                                <li class="nav-item">
+                                    <a href="{{ url('capacitacion') }}"
+                                        class="{{ Request::path() === 'capacitacion' ? 'nav-link active' : 'nav-link' }}">
+                                        <i class="nav-icon fa-solid fa-building-columns"></i>
+                                        <p>
+                                            Capacitacion a moderadores
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
                         </ul>
                     </nav>
                     <!-- /.sidebar-menu -->

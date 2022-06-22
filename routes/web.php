@@ -33,6 +33,10 @@ Route::get('/pago', function () {
 Route::get('/capacitacion', function () {
     return view('capacitacion');
 });
+Route::get('/como', function () {
+    return view('como');
+});
+
 
 Route::get('/about', function () {
     return view('about');
