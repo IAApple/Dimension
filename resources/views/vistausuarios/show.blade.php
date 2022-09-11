@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
     </head>
 
     <body>
@@ -19,11 +20,11 @@
         <div class="container">
             <div class="card-block">
                 <br>
-
+                <br>
                 <div class="row">
                     <div class="col-md-4">
                         <p>
-                            <img src="{{ asset('imagenes/' . $user->imagen) }}" class="img-circle" alt=""
+                            <img src="{{ asset('imagenes/' . $user->imagen) }}" class="img-circle"  alt=""
                                 height="320">
                         </p>
                     </div>
@@ -50,8 +51,8 @@
                 </div>
 
             </div>
-            <br>
-            <br>
+<br>
+<br>
 
             <div class="container">
                 <div class="row align-items-center flex-row-reverse">

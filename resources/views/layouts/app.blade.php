@@ -129,25 +129,6 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="{{ url('vistaforms') }}"
-                                    class="{{ Request::path() === 'vistaforms' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fa-solid fa-file-circle-check"></i>
-                                    <p>
-                                        Crear cotización
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ url('pago') }}"
-                                    class="{{ Request::path() === 'pago' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fa-solid fa-comments-dollar"></i>
-                                    <p>
-                                        Realizar pago
-                                    </p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
                                 <a href="{{ url('about') }}"
                                     class="{{ Request::path() === 'about' ? 'nav-link active' : 'nav-link' }}">
                                     <i class="nav-icon fa-solid fa-user-tie"></i>
@@ -159,17 +140,7 @@
                                 </a>
                             </li>
                             
-                            <li class="nav-item">
-                                <a href="{{ url('como') }}"
-                                    class="{{ Request::path() === 'como' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fa-solid fa-user-tie"></i>
 
-
-                                    <p>
-                                        ¿Como funcionamos?
-                                    </p>
-                                </a>
-                            </li>
 
 
                             @can('administrador')
