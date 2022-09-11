@@ -77,7 +77,7 @@ class UserController extends Controller
 
     public function update(UserEditFormRequest $request, $id)
     {
-        $this->validate(request(), ['email' => ['required', 'email', 'max:255', 'unique:users,email,' . $id]]);
+        $this->validate(request(), ['email' => ['required', 'email', 'max:1500', 'unique:users,email,' . $id]]);
         $usuario = User::findOrFail($id);
         $usuario->name = $request->get('name');
         $usuario->email = $request->get('email');

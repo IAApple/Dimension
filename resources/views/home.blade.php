@@ -24,7 +24,7 @@
     <body>
 
         <div class="bg-image d-flex justify-content-center align-items-center"
-            style=" background-image: url('dist/img/Dimension_BACK1.png'); height: 100vh;">
+            style=" background-image: url('dist/img/Fondo mundo-vectores.png'); height: 100vh;">
             <div class="justify-content-center text-center">
                 
                 <img src="\dist\img\Dimension\Dimension-LogoW4.png">
